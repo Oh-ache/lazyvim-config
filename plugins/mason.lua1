@@ -1,0 +1,10 @@
+--return {
+--opts = {
+--ensure_installed = {
+--"phpcs",
+--"php-cs-fixer",
+--"gopls",
+--"goimports",
+--},
+--},
+--}

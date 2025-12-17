@@ -18,8 +18,9 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { import = "lazyvim.plugins.extras.ai.codeium" },
     { "hrsh7th/nvim-cmp", enabled = true },
-    { import = "lazyvim.plugins.extras.ai.copilot" }, -- import/override with your plugins
+    -- { import = "lazyvim.plugins.extras.ai.copilot" }, -- import/override with your plugins
     { import = "plugins" },
   },
   defaults = {

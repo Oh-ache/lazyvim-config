@@ -10,26 +10,22 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
-      -- add any opts here
+      -- add any opts herejjjj
       -- this file can contain specific instructions for your project
       instructions_file = "avante.md",
       -- for example
-      provider = "huoshan",
+      provider = "minimax",
       providers = {
-        claude = {
-          endpoint = "https://api.anthropic.com",
-          model = "claude-sonnet-4-20250514",
-          timeout = 30000, -- Timeout in milliseconds
+        minimax = {
+          __inherited_from = "openai",
+          endpoint = "https://api.minimaxi.com/v1", -- 国内 endpoint
+          api_key_name = "MINIMAX_API_KEY",
+          model = "MiniMax-M2.7", -- 模型名，如 abab6.5s、MiniMax-M2.7
+          timeout = 30000, -- 超时时间（毫秒）
           extra_request_body = {
             temperature = 0.75,
-            max_tokens = 20480,
+            max_tokens = 32768,
           },
-        },
-        huoshan = {
-          __inherited_from = "openai",
-          endpoint = "https://ark.cn-beijing.volces.com/api/coding/v3",
-          model = "Doubao-Seed-Code",
-          api_key_name = "OPENAPI_KEY",
         },
       },
     },
